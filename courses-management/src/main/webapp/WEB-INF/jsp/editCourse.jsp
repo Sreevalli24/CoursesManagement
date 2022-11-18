@@ -23,14 +23,14 @@
 				<tr>
 				
 					<td><i>The Course Number:</i></td>
-					<td><input type="text" name="courseId"></td>
+					<td><input type="text" name="courseId" value= "${courses.courseId}"></td>
 					
 				</tr>
 
 				<tr>
 				
 					<td><i>The Course Name:</i></td>
-					<td><input type="text" name="courseName"></td>
+					<td><input type="text" name="courseName" value= "${courses.courseName}"></td>
 					
 				</tr>
 
