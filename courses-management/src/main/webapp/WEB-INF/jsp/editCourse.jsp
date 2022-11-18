@@ -36,14 +36,14 @@
 
 				<tr>
 					<td><i>*Enter New Fees:</i></td>
-					<td><input type="text" name="fees"></td>
+					<td><input type="text" name="fees" value= "${courses.fees}"></td>
 					
 				</tr>
 
 				<tr>
 				
 					<td><i>*Enter New Duration:</i></td>
-					<td><input type="text" name="duration"></td>
+					<td><input type="text" name="duration" value= "${courses.duration}"></td>
 					
 				</tr>
 
