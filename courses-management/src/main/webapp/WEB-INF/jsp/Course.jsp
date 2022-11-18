@@ -35,7 +35,7 @@
 				
 				<td><a href="/editCourse?id=${course.courseId}"
 					class="btn btn-sm btn-danger">Edit</a> &nbsp; &nbsp; 
-					<a href="/removeCourse=${course.courseId}" class="btn btn-sm btn-danger">Remove</a></td>
+					<a href="/removeCourse?id=${course.courseId}" class="btn btn-sm btn-danger">Remove</a></td>
 			</tr>
 			
 			</c:forEach>

@@ -51,6 +51,15 @@ public class CourseController {
 		return mv;
 	}
 	
+	@GetMapping("/removeCourse")
+	public ModelAndView removeCourse(@RequestParam("id") Long id) {
+
+		ModelAndView mv = new ModelAndView("redirect:/start");
+
+		courseService.deleteCourse(id);
+
+		return mv;
+	}
 	
 	@PostMapping("/save")
 	public ModelAndView saveCourse(@ModelAttribute("courses") Course course ) {

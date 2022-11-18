@@ -27,5 +27,9 @@ public class CourseService {
 		return result.get();
 	}
     
+    public void deleteCourse(Long id) {
+		courseRepository.deleteById(id);
+	}
+    
    
 }
