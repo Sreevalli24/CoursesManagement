@@ -24,7 +24,7 @@
 				<tr>
 				
 					<td><i>The Course Number:</i></td>
-					<td><input type="text" name="courseId"></td>
+					<td><input type="text" name="courseId" value = "${courses.courseId}"></td>
 					
 				</tr>
 

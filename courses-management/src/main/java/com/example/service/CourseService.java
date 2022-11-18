@@ -31,5 +31,12 @@ public class CourseService {
 		courseRepository.deleteById(id);
 	}
     
-   
+    public Long generateId() {
+    	Long val = courseRepository.findMaxCourseId();
+    	if(val == null)
+    		val = 101L;
+    	else
+    		val = val + 1;
+    	return val;
+    } 
 }
