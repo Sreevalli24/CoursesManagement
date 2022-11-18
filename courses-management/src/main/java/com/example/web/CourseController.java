@@ -10,20 +10,20 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.example.entity.Course;
-import com.example.service.CourseService;
+import com.example.service.CourseDao;
 
 @RestController
 public class CourseController {
 	
 	@Autowired
-	CourseService courseService;
+	CourseDao courseDao;
 	
 	@GetMapping("/start")
 	public ModelAndView getCourses(Model model) {
 		
 		ModelAndView mv = new ModelAndView("Course");
 		
-		model.addAttribute("courses", courseService.getAllCourses());
+		model.addAttribute("courses", courseDao.getAllCourses());
 		
 		return mv;
 	}	
@@ -33,7 +33,7 @@ public class CourseController {
 
 		ModelAndView mv = new ModelAndView("newCourse");
 		
-		Long id = courseService.generateId();
+		Long id = courseDao.generateId();
 		
 		Course courses = new Course();
 		
@@ -50,7 +50,7 @@ public class CourseController {
 
 		ModelAndView mv = new ModelAndView("editCourse");
 		
-		Course updatedCourses = courseService.getCourse(id);
+		Course updatedCourses = courseDao.getCourse(id);
 		
 		mv.addObject("courses", updatedCourses);
 
@@ -62,7 +62,7 @@ public class CourseController {
 
 		ModelAndView mv = new ModelAndView("redirect:/start");
 
-		courseService.deleteCourse(id);
+		courseDao.deleteCourse(id);
 
 		return mv;
 	}
@@ -72,7 +72,7 @@ public class CourseController {
 
 		ModelAndView mv = new ModelAndView("redirect:/start");
 
-		courseService.saveCourses(course);
+		courseDao.saveCourses(course);
 
 		return mv;
 
